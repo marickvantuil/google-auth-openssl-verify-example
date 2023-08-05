@@ -8,6 +8,8 @@ $token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkNDhhNzUxMzhkOWQ0OGYwYWE2MzVlZjU2OWM0ZT
 
 $accessToken = new AccessToken();
 
+echo OPENSSL_VERSION_TEXT;
+
 var_dump(
     $accessToken->verify($token)
 );
