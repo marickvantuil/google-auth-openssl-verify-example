@@ -8,10 +8,6 @@ $token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkNDhhNzUxMzhkOWQ0OGYwYWE2MzVlZjU2OWM0ZT
 
 $accessToken = new AccessToken();
 
-try {
-    var_dump(
-        $accessToken->verify($token)
-    );
-} catch (Error $error) {
-    echo $error->getMessage();
-}
+var_dump(
+    $accessToken->verify($token)
+);
