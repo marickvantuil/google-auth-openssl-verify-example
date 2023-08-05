@@ -36,6 +36,6 @@ jobs:
           coverage: none
       - name: Execute action
         run: |
-          composer require "phpseclib/phpseclib:${{ matrix.payload.phpseclib }}" --no-interaction --no-update
+          composer require "phpseclib/phpseclib:^${{ matrix.payload.phpseclib }}" --no-interaction --no-update
           composer update --prefer-stable --prefer-dist --no-interaction
           php example.php
