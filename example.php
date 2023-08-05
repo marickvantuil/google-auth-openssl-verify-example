@@ -1,0 +1,17 @@
+<?php
+
+use Google\Auth\AccessToken;
+
+require 'vendor/autoload.php';
+
+$token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkNDhhNzUxMzhkOWQ0OGYwYWE2MzVlZjU2OWM0ZTE5NmY3YWU4ZDYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiI0MmMwODE0OTlkOWY1MTI3OGE5YzFlZjQ2YzQyNDNiMjBlYTQzODE2NjI4MDIxZTIxNmNkZWFjNWQ4NzBlMzU0IiwiYXpwIjoiMTEyNDA1OTAyMTM3NTczNDA2MTAzIiwiZW1haWwiOiJjbG91ZC10YXNrc0B0ZXN0LTMyNjYxOC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJleHAiOjE2OTEyNDc5MjMsImlhdCI6MTY5MTI0NDMyMywiaXNzIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tIiwic3ViIjoiMTEyNDA1OTAyMTM3NTczNDA2MTAzIn0.AnFDXh8ZxZRB7r2iRbC2CN13lrzqnjuMjAXj-DXOtcSj_y5TlzIakXt3429e_6s2OujdnzMglerPQElFeLpqrD1ZDEFzhu1GkKTH-tNSg3q2SHLvRxM11zaYvtMUvjwYDWwKP_8vAyUsEGi25iVlBTfp_SLVArD6PLb1fAGQpbcpKMasmwevBNDtCJJJrQLQXwgHfJL-aJkzlF3Gv8199KtdS59ba7C4QEdWhU4ybNc7gs2BY4V6aDvmXmadRBAfWN0sPwY00M7gt4gm8rJE8fa47Zo4zqDe_WRR3mElifFE2uEhOIgVmDKty3lSJZA8CMXLx_3Feh50sxuAEoP_kg';
+
+$accessToken = new AccessToken();
+
+try {
+    var_dump(
+        $accessToken->verify($token)
+    );
+} catch (Error $error) {
+    echo $error->getMessage();
+}
